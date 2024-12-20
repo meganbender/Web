@@ -1,0 +1,91 @@
+.shop {
+    background-color: #F0F0F0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px 30px 30px;
+}
+
+.shopTitle {
+    text-align: left;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    width: 48%;  /* 2 products per row on large screens */
+    box-sizing: border-box;
+    /* text-align: center; */
+    transition: transform 0.3s ease-in-out;
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    gap: 15px; 
+    height: 100%; 
+    max-height: 400px; 
+}
+
+.productTitle {
+    background-color: rgb(174, 195, 227);
+    padding: .25em;
+    grid-column: span 2;
+    text-align: left;
+}
+
+.description{
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding-right: 15px;
+    padding-left: .25em;
+}
+
+.addToCart {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: solid 1px #000000;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 45%;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.add-to-cart-btn button:hover {
+    background-color: rgb(174, 195, 227);
+}
+
+@media (max-width: 1024px) {
+    .product {
+        width: 45%;
+    }
+
+    .add-to-cart-btn button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 100%;
+    }
+
+    .add-to-cart-btn button {
+        width: 100%;
+        padding: 12px;
+    }
+}
